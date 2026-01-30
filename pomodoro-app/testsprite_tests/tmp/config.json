@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "loginUser": "Pomodorotest2",
+  "executionArgs": {
+    "projectName": "pomodoro-app",
+    "projectPath": "/Users/jackflickinger/Desktop/Everything/Projects/Web/Pomodoro/pomodoro-app",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-RV6nQrZtPFi_FfK1wWW0cuWw0APvNI5mauM7i54AksyouWKQs0qFcSCxHP90er5LY_TjT3YJLn5-mGxgDYXs11N8ccON_Jo101-l45jIzjxwNnNVjznR1zS9-ztUVEVlrdA"
+    }
+  },
+  "proxy": "http://e81bdc15-1856-4c69-a47c-d97fda384140:OYmZa41hTo3Ettc8fAcjxg1WKw7ckbxq@tun.testsprite.com:8080"
+}

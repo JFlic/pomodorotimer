@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "project": "Digital Terrarium Pomodoro",
+    "date": "2026-01-29",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "Digital Terrarium Pomodoro gamifies the Pomodoro technique by turning focus time into a visual and interactive digital terrarium experience. Users nurture a digital plant that grows incrementally with each completed focus session, enhancing motivation and providing visual feedback on productivity.",
+  "core_goals": [
+    "Encourage sustained focus through the Pomodoro technique.",
+    "Provide visual and interactive feedback to motivate users.",
+    "Integrate a gamified plant growth cycle tied to focus sessions.",
+    "Allow task management alongside focus sessions via a to-do list.",
+    "Reset and manage plant growth stages logically based on user interaction."
+  ],
+  "key_features": [
+    "Pomodoro timer with play, pause, and reset controls.",
+    "Visual plant growth stages represented by images depicting start, middle, and end growth.",
+    "Modal popup warning when plant dies triggered by pausing or resetting mid-session, resetting plant growth.",
+    "To-do list panel to add, list, and remove tasks with persistence across sessions.",
+    "Session completion tracking with progress dots and a harvest feature that resets growth after three sessions, while maintaining to-do tasks.",
+    "Clean user interface styled with Tailwind CSS and functional React components for smooth operation."
+  ],
+  "user_flow_summary": [
+    "User opens the app and views the current plant growth stage and a to-do list panel.",
+    "User adds tasks to the to-do list using the Enter key and can remove tasks with a trash button.",
+    "User starts a 25-minute Pomodoro timer; a circular progress bar visually represents remaining time.",
+    "Upon completion of a session, the plant image advances to the next growth stage and session count increments.",
+    "If the user pauses or resets the timer mid-session, a modal popup 'Your plant died!' alerts the user and resets the plant growth stage to start.",
+    "After completing three full sessions, the plant blooms fully, and user is prompted to start over with a new seed, resetting session counts and plant stage but preserving the to-do list."
+  ],
+  "validation_criteria": [
+    "Pomodoro timer starts, pauses, resumes, and resets correctly with accurate countdown.",
+    "Plant grows to the next stage only after full sessions are completed, visually updating images as expected.",
+    "Modal popup displays and plant resets if user interrupts a session by pausing or resetting mid-cycle.",
+    "To-do list accurately adds and removes tasks and persists data on app restart.",
+    "Session completion count and progress dots update correctly after each session.",
+    "After three sessions, plant growth resets and user prompt appears, with to-do list unaffected.",
+    "UI styling matches design specifications and app runs smoothly without errors."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "JavaScript",
+      "React 19",
+      "Vite 7",
+      "Tailwind CSS 4",
+      "lucide-react"
+    ],
+    "features": [
+      {
+        "name": "Pomodoro timer",
+        "description": "Countdown timer with play/pause and reset; session completion advances plant stage.",
+        "files": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "name": "Plant growth stages",
+        "description": "Visual plant stages (start/middle/end) shown as images; plant resets to start image when dead.",
+        "files": [
+          "src/App.jsx",
+          "src/imgs/start.png",
+          "src/imgs/middle.png",
+          "src/imgs/end.png"
+        ]
+      },
+      {
+        "name": "Plant died popup",
+        "description": "Modal popup 'Your plant died!' when user pauses or resets mid-session; plant resets to start image.",
+        "files": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "name": "To-do list",
+        "description": "Left-side panel to add, list, and remove to-do items with Enter key and trash button; preserved on restart.",
+        "files": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "name": "Sessions completed and harvest",
+        "description": "Displays sessions completed count and progress dots; after 3 sessions prompts 'Start over with a new seed' and resets everything except to-do list.",
+        "files": [
+          "src/App.jsx"
+        ]
+      },
+      {
+        "name": "App entry and styles",
+        "description": "React root, global CSS, and Tailwind setup.",
+        "files": [
+          "src/main.jsx",
+          "src/index.css",
+          "src/App.css"
+        ]
+      }
+    ]
+  }
+}

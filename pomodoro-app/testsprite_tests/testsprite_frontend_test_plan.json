@@ -1,0 +1,324 @@
+[
+  {
+    "id": "TC001",
+    "title": "Pomodoro timer start and countdown",
+    "description": "Verify the Pomodoro timer starts correctly and counts down from 25 minutes to 0 with accurate time updates.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the app and locate the Pomodoro timer"
+      },
+      {
+        "type": "action",
+        "description": "Click the start/play button to begin the timer"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm timer begins counting down from 25:00"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate the timer updates every second decrementing accurately"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Pomodoro timer pause and resume",
+    "description": "Ensure the Pomodoro timer pauses when the pause button is pressed and resumes from the paused time.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the Pomodoro timer"
+      },
+      {
+        "type": "action",
+        "description": "Click the pause button mid-session"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the timer countdown halts immediately"
+      },
+      {
+        "type": "action",
+        "description": "Click the play button to resume the timer"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify timer resumes countdown from paused time accurately"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Pomodoro timer reset functionality",
+    "description": "Verify that clicking reset mid-session stops the timer and resets it back to 25 minutes.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the Pomodoro timer"
+      },
+      {
+        "type": "action",
+        "description": "Click the reset button before session completes"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm timer stops and resets to 25:00"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Plant growth advances after full session completion",
+    "description": "Check that the plant growth stage advances to the next image only after a full 25-minute session completes without interruption.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start and allow the Pomodoro timer to run until 0:00 without pausing or resetting"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the plant image changes from start to middle growth stage"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Plant growth resets and popup appears on pause mid-session",
+    "description": "Verify that pausing the timer mid-session triggers 'Your plant died!' popup and resets plant growth to start image.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the Pomodoro timer"
+      },
+      {
+        "type": "action",
+        "description": "Pause the timer before session completes"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the modal popup with text 'Your plant died!' appears"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the plant resets to start growth image"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Plant growth resets and popup appears on reset mid-session",
+    "description": "Check that resetting the timer mid-session shows the 'Your plant died!' modal and resets plant growth to start stage.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the Pomodoro timer"
+      },
+      {
+        "type": "action",
+        "description": "Click reset before session completes"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm modal popup 'Your plant died!' is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify plant growth resets to initial stage"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "To-do list add task with Enter key",
+    "description": "Verify users can add new tasks to the to-do list by typing and pressing Enter key, and tasks appear correctly in the list.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Focus on the to-do list input field"
+      },
+      {
+        "type": "action",
+        "description": "Type a new task and press Enter"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the new task appears in the to-do list panel"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "To-do list remove tasks using trash button",
+    "description": "Verify that clicking the trash button next to a task removes it from the to-do list immediately.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Add one or more tasks to the to-do list"
+      },
+      {
+        "type": "action",
+        "description": "Click the trash/delete button next to a task"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the selected task is removed from the list"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "To-do list data persistence across sessions",
+    "description": "Validate that tasks added to the to-do list persist and are restored correctly after closing and reopening the app.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Add tasks in the to-do list"
+      },
+      {
+        "type": "action",
+        "description": "Close the app or reload the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the previously added tasks remain visible in the to-do list"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Session completion count and progress dots update correctly",
+    "description": "Ensure that after each fully completed Pomodoro session, the session count increments, and corresponding progress dots update visually.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete one full Pomodoro session without pause or reset"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sessions completed count increments by one"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that a progress dot is highlighted or added representing this session"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Plant blooms after three completed sessions and resets correctly",
+    "description": "Verify that after three full Pomodoro sessions, the plant image shows full bloom, user is prompted to start over, and the plant growth and session counts reset accordingly without affecting to-do list.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete three full Pomodoro sessions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the plant shows the full bloom (end) image"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm a prompt is displayed to start over with a new seed"
+      },
+      {
+        "type": "action",
+        "description": "Acknowledge the prompt to reset"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate the session count resets to zero and plant stage resets to start image"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the existing to-do list tasks remain unchanged"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Plant growth does not advance for incomplete sessions",
+    "description": "Ensure that the plant growth stage does not advance if a Pomodoro session is interrupted by pause or reset and not completed fully.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start a Pomodoro session and pause or reset before completion"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm plant growth stage does not progress from the current state"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Pomodoro timer handles edge case at 0 seconds",
+    "description": "Verify that the timer stops exactly at 0:00 without going into negative time and triggers expected session completion behavior.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the Pomodoro timer and let it count down to 0:00"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure timer displays 0:00 and does not show negative values"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm session completion procedures trigger, including plant growth advancement and session count increment"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "UI styling and component rendering correctness",
+    "description": "Validate that the user interface elements are styled as per Tailwind CSS design, including timer, plant images, modal, to-do panel, and progress dots, and that the app runs smoothly without console errors.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Load the application in supported browsers"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all UI components render correctly as per design specs"
+      },
+      {
+        "type": "assertion",
+        "description": "Check for presence and correct styling of timer, plant images, to-do panel, modal popups, and progress dots"
+      },
+      {
+        "type": "assertion",
+        "description": "Open developer console and verify no error logs appear during usage"
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "tech_stack": ["JavaScript", "React 19", "Vite 7", "Tailwind CSS 4", "lucide-react"],
+  "features": [
+    {
+      "name": "Pomodoro timer",
+      "description": "Countdown timer with play/pause and reset; session completion advances plant stage.",
+      "files": ["src/App.jsx"]
+    },
+    {
+      "name": "Plant growth stages",
+      "description": "Visual plant stages (start/middle/end) shown as images; plant resets to start image when dead.",
+      "files": ["src/App.jsx", "src/imgs/start.png", "src/imgs/middle.png", "src/imgs/end.png"]
+    },
+    {
+      "name": "Plant died popup",
+      "description": "Modal popup 'Your plant died!' when user pauses or resets mid-session; plant resets to start image.",
+      "files": ["src/App.jsx"]
+    },
+    {
+      "name": "To-do list",
+      "description": "Left-side panel to add, list, and remove to-do items with Enter key and trash button; preserved on restart.",
+      "files": ["src/App.jsx"]
+    },
+    {
+      "name": "Sessions completed and harvest",
+      "description": "Displays sessions completed count and progress dots; after 3 sessions prompts 'Start over with a new seed' and resets everything except to-do list.",
+      "files": ["src/App.jsx"]
+    },
+    {
+      "name": "App entry and styles",
+      "description": "React root, global CSS, and Tailwind setup.",
+      "files": ["src/main.jsx", "src/index.css", "src/App.css"]
+    }
+  ]
+}
