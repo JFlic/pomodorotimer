@@ -5,7 +5,7 @@ import middleImg from "./imgs/middle.png";
 import endImg from "./imgs/end.png";
 
 const App = () => {
-  const [timeLeft, setTimeLeft] = useState(3);
+  const [timeLeft, setTimeLeft] = useState(25*60);
   const [isRunning, setIsRunning] = useState(false);
   const [sessionsCompleted, setSessionsCompleted] = useState(0);
   const [plantStage, setPlantStage] = useState(0);
@@ -28,7 +28,7 @@ const App = () => {
     setTodoItems((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const POMODORO_TIME = 3;
+  const POMODORO_TIME = 25*60;
 
   useEffect(() => {
     if (isRunning && timeLeft > 0) {
